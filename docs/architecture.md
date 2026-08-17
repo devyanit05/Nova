@@ -23,17 +23,18 @@ The running product is a static web app. There is no server, no auth, and no net
 ┌─────────────────────────────────────────────────────────┐
 │                     Browser                             │
 │                                                         │
-│  index.html          layout, views, section shells      │
-│  index.css           design tokens + components         │
+│  app/frontend/                                          │
+│    index.html        layout, views, section shells      │
+│    index.css         design tokens + components         │
 │                                                         │
-│  js/init.js          boot sequence                      │
-│  js/state.js         load / save / todayKey             │
-│  js/constants.js     limits, labels, default finance    │
-│  js/data.js          quotes, career content             │
-│  js/utils.js         DOM + helpers                      │
-│  js/ui.js            theme, greeting, toasts, confetti  │
+│    js/init.js        boot sequence                      │
+│    js/state.js       load / save / todayKey             │
+│    js/constants.js   limits, labels, default finance    │
+│    js/data.js        quotes, career content             │
+│    js/utils.js       DOM + helpers                      │
+│    js/ui.js          theme, greeting, toasts, confetti  │
 │                                                         │
-│  js/modules/                                            │
+│    js/modules/                                          │
 │    navigation.js     views + section tabs               │
 │    routine.js        fixed schedule                     │
 │    tasks.js          daily tasks                        │

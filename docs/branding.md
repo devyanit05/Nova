@@ -38,7 +38,7 @@ Primary supporting line: **A Life Operating System.**
 
 Until a designed SVG exists, use a consistent unicode star (e.g. `✦` or `🌌` only in marketing, not in dense UI). Prefer `✦` in-product; reserve the milky-way emoji for README / banner.
 
-**Banner:** `assets/banner.png` is referenced by the README and is not in the repo yet. Phase 0 should add a wide, dark banner: mark, name, tagline, no screenshot clutter.
+**Banner:** README points at `design/banners/banner.png`. The file is not in the repo yet. Phase 0 should add a wide, dark banner: mark, name, tagline, no screenshot clutter.
 
 ---
 

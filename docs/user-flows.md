@@ -22,7 +22,7 @@ Nova v0 was built as all three in one person. Flows must still work if a user on
 ## Flow 0 — First open
 
 ```
-Open index.html
+Open app/frontend/index.html
   → loadState()
   → if no routine: may install seed timetable
   → if no today key: create day, seed DEFAULT_TASKS, water 0, empty journal

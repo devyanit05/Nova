@@ -6,7 +6,7 @@
 
 Plan. Track. Grow.
 
-<img src="assets/banner.png" alt="Nova Banner" width="100%">
+<img src="design/banners/banner.png" alt="Nova Banner" width="100%">
 
 ---
 
@@ -244,6 +244,24 @@ Every day.
 For years.
 
 ---
+
+# 📁 Repository
+
+```
+nova/
+├── docs/              Product specs (vision, architecture, APIs, …)
+├── design/            Wireframes, logo, banners, inspirations
+├── website/           Public marketing site
+├── app/               Life OS — frontend prototype + future backend
+├── infrastructure/    Docker, Kubernetes, Terraform, CI, monitoring
+├── database/          Schema, migrations, seed, diagrams
+├── api/               Postman, OpenAPI, examples
+├── research/          Competitors, feedback, ideas, experiments
+├── assets/            Screenshots, demo, videos, images
+└── .github/           Issue and pull request templates
+```
+
+Run the current prototype from [`app/frontend`](./app/frontend) — open `index.html` or `npx serve app/frontend`.
 
 # 🤝 Contributing
 

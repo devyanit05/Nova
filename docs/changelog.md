@@ -8,6 +8,12 @@ Convention: every user-visible change that ships gets a dated entry. Roadmap sta
 
 ## Unreleased
 
+### Repository
+
+- Laid out the root as a full product repo: `docs/`, `design/`, `website/`, `app/`, `infrastructure/`, `database/`, `api/`, `research/`, `assets/`, `.github/`.
+- Restored the DayTrack prototype into `app/frontend/` (it had been dropped from `master`).
+- Added MIT `LICENSE`, expanded `.gitignore`, and GitHub issue / PR templates.
+
 ### Documentation
 
 - Added the `docs/` set: vision, roadmap, architecture, workspaces, user-flows, database, API design, UI/UX principles, branding, monetization, and this changelog.
