@@ -1,174 +1,273 @@
 # Nova — Development Roadmap
 
-This roadmap translates the [vision](./vision.md) into buildable phases. It is honest about what already exists in the local prototype and what is still product fiction.
-
-Status key:
-
-| Mark | Meaning |
-|------|---------|
-| Done | Shipped in the current local-first web app |
-| Now | In progress or next to harden |
-| Next | Planned for the following phase |
-| Later | Intentionally deferred |
+> Build slowly. Ship often. Every release should make Nova feel more like a real product.
 
 ---
 
-## Guiding rules
+# Current Status
 
-1. **Ship the daily loop first.** If Today, Schedule, Tasks, Water, and History are weak, nothing else matters.
-2. **Do not add a backend until local truth is clean.** Schema, export, and day-rollover must be right before sync.
-3. **Rebrand before platform rewrite.** The product is Nova. The running UI is still DayTrack. That gap closes in Phase 0.
-4. **One workspace quality bar.** A new workspace ships only when it has empty states, persistence, and a history footprint.
-5. **AI is Phase 4.** No model calls until the OS has enough structured life data to coach against.
+**Phase:** Planning & Design
 
----
+Nova has:
 
-## Phase 0 — Identity and foundation *(Now)*
+- ✅ Product Vision
+- ✅ Product Requirements
+- ✅ Workspace Design
+- ✅ Architecture
+- ✅ API Contract
+- ✅ UI / UX Principles
+- ✅ Branding Direction
 
-Close the gap between the README brand and the running product.
+The foundation is complete.
 
-- [ ] Rename the UI from DayTrack to Nova
-- [ ] Replace leftover storage keys (`daytrack_*`) with a versioned `nova_*` namespace, with a one-time migration
-- [ ] Add `docs/` as the product source of truth (this set)
-- [ ] Add a real favicon, banner, and wordmark (see [branding.md](./branding.md))
-- [ ] Document the current local schema (see [database.md](./database.md))
-- [ ] Establish a changelog habit (see [changelog.md](./changelog.md))
+The next goal is no longer writing documents.
 
-**Exit:** A stranger can open the app and know it is Nova.
+The next goal is building Nova.
 
 ---
 
-## Phase 1 — Daily operating loop
+# Release Philosophy
 
-The minimum Life OS. Most of this already exists and needs product polish, not invention.
+Every release must satisfy three rules.
 
-| Capability | Status | Notes |
-|------------|--------|-------|
-| Fixed daily schedule | Done | Time-blocked routine with check-off |
-| Daily tasks (max 10) | Done | Category + priority |
-| Water tracker (8 glasses) | Done | Sidebar + reminders |
-| Task / water reminders | Done | Interval timers in the browser |
-| Streak | Done | Shown in the top bar |
-| Today completion ring | Done | Sidebar overall % |
-| Dark / light theme | Done | Settings toggle |
-| Name-based greeting | Done | Settings |
-| JSON export / clear data | Done | Local only |
-| Nova branding in UI | Now | Still DayTrack |
-| Recurring tasks beyond the fixed routine | Next | Distinct from routine items |
-| Priority matrix view | Next | Data already has priority |
-| Calendar integration | Later | External calendars |
-
-**Exit:** A user can run a full weekday in Nova without another to-do app.
+1. Ship something people can actually use or see.
+2. Leave the project in a deployable state.
+3. Improve the product—not just the code.
 
 ---
 
-## Phase 2 — Money, skill, and learning
+# Release 0.1 — Landing Website
 
-Finance and career already have a strong prototype. This phase makes them durable and less personal-hardcoded.
+Status: **Current**
 
-| Capability | Status | Notes |
-|------------|--------|-------|
-| Daily spend log | Done | Categories, INR |
-| Monthly budgets + remaining | Done | Income + category caps |
-| Predictive burn-rate chart | Done | Chart.js |
-| Trips & savings goals | Done | Travel mode vault |
-| Subscriptions | Done | Ghost-sub warning |
-| Investment projection | Done | 12% YoY compound chart |
-| Bank CSV import (ICICI / HDFC) | Done | Client-side categorize |
-| Career checklist | Done | Seeded DevOps / SDET path |
-| Technical Q&A practice | Done | K8s, Jenkins, AWS, Git, SDET |
-| Mock interview timer | Done | STAR-oriented tips |
-| English fluency workspace | Done | Word / idiom + reading paragraph |
-| Configurable career tracks | Next | Remove hardcoded job-switch path |
-| Learning hub (vocab collections, reading tracker) | Next | English exists; hub does not |
-| Skill roadmaps & milestones | Next | Career checklist is the seed |
-| Subscription manager polish | Next | Renewal calendar |
+Goal:
 
-**Exit:** Finance and career work for a second person without editing `js/data.js`.
+> Introduce Nova to the world before building the product.
 
----
+Deliverables
 
-## Phase 3 — Memory and insight
+- [ ] Purchase / configure domain
+- [ ] Design landing page
+- [ ] Build responsive website
+- [ ] Explain Nova's philosophy
+- [ ] Introduce Workspaces
+- [ ] Showcase screenshots / mockups
+- [ ] Public roadmap
+- [ ] GitHub links
+- [ ] Contact section
+- [ ] Deploy
 
-History exists as a weekly grid. This phase turns raw days into reviews.
+Exit Criteria
 
-| Capability | Status | Notes |
-|------------|--------|-------|
-| Weekly history grid | Done | Day cards + detail modal |
-| Daily journal + prompts | Done | Autosave |
-| Weekly review ritual | Next | Guided Sunday / Friday review |
-| Monthly life report | Next | Health, money, tasks, career |
-| Habit streaks beyond the global fire | Next | Per-habit |
-| Sleep / exercise / mood | Next | Health dashboard expansion |
-| Smart (rule-based) insights | Next | No model required |
-| Vision board | Later | After reviews exist |
+Someone discovering Nova for the first time should understand:
 
-**Exit:** A user can explain last month from Nova alone.
+- what Nova is
+- why it exists
+- who it is for
+
+without opening GitHub.
 
 ---
 
-## Phase 4 — Platform
+# Release 0.2 — Product Design
 
-Leave the single-HTML prototype. Keep the interaction model.
+Goal
 
-| Capability | Status | Notes |
-|------------|--------|-------|
-| Auth (OAuth + JWT) | Later | See [architecture.md](./architecture.md) |
-| PostgreSQL + sync | Later | See [database.md](./database.md) |
-| REST API | Later | See [api-design.md](./api-design.md) |
-| Cross-device Today | Later | Conflict rule: last-write per day-key field |
-| Push notifications | Later | Replace `setInterval` reminders |
-| Mobile client (Flutter or React Native) | Later | Same workspaces, native chrome |
-| Docker / CI | Later | After the API exists |
+> Design the entire experience before writing production code.
 
-**Exit:** The same life data opens on phone and laptop.
+Deliverables
 
----
+- [ ] Design System
+- [ ] Color palette
+- [ ] Typography
+- [ ] Icons
+- [ ] Components
+- [ ] Dashboard mockup
+- [ ] Workspace mockups
+- [ ] Mobile layouts
+- [ ] User flow validation
 
-## Phase 5 — AI coach
+Exit Criteria
 
-Only after Phases 1–3 produce structured history.
-
-| Capability | Status | Notes |
-|------------|--------|-------|
-| Plan the day from routine + unfinished goals | Later | |
-| Weekly progress review in language | Later | |
-| Habit and budget recommendations | Later | Finance advisor copy already exists as rules |
-| Learning-path suggestions | Later | |
-| Voice commands | Later | After mobile |
-| Smart scheduling | Later | Must never silently overwrite the user's routine |
-
-**Constraint:** The coach proposes. The user commits. Nova does not auto-spend, auto-apply, or auto-reschedule without confirmation.
+Every major screen exists before development begins.
 
 ---
 
-## Suggested sequence for the next 90 days
+# Release 0.3 — Local MVP
 
-```
-Week 1–2    Phase 0 rebrand + storage migration + docs living in repo
-Week 3–5    Harden Phase 1: empty states, day rollover, reminder reliability
-Week 6–8    Make finance and career configurable (Phase 2)
-Week 9–10   Weekly review + monthly report (Phase 3 start)
-Week 11–12  Health dashboard: sleep / mood / movement stubs
-```
+Goal
 
-A backend is **out of scope** for this 90-day window unless sync becomes a blocker.
+> Build the first working version of Nova.
+
+Deliverables
+
+- [ ] Dashboard
+- [ ] Today Workspace
+- [ ] Schedule
+- [ ] Tasks
+- [ ] Water Tracker
+- [ ] Journal
+- [ ] History
+- [ ] Local Storage
+- [ ] Settings
+- [ ] Export / Import
+
+Exit Criteria
+
+A user can genuinely use Nova every day instead of another productivity app.
 
 ---
 
-## Explicit non-goals (near term)
+# Release 0.4 — Productivity Workspaces
 
-- Multiplayer or social feeds
-- Public profile
-- Marketplace of third-party workspaces
-- Crypto, trading, or tax filing
-- Replacing the user's bank
-- Replacing LinkedIn, LeetCode, or a brokerage
+Goal
+
+> Expand Nova into a complete Life Operating System.
+
+Deliverables
+
+Finance
+
+- [ ] Daily expenses
+- [ ] Monthly budget
+- [ ] Savings goals
+- [ ] Investment tracker
+- [ ] Subscription manager
+
+Career
+
+- [ ] Career Roadmaps
+- [ ] Technical Practice
+- [ ] Interview Practice
+- [ ] English Fluency
+
+Self Care
+
+- [ ] Reading
+- [ ] Walking
+- [ ] Meditation
+- [ ] Sleep
+- [ ] Mood
+- [ ] Self-care rituals
+
+Learning
+
+- [ ] Skill trackers
+- [ ] Reading tracker
+- [ ] Learning goals
+
+Exit Criteria
+
+A user can manage most areas of life from Nova.
 
 ---
 
-## How this document changes
+# Release 0.5 — Platform
 
-- When a phase item ships, move it to Done and add a line in [changelog.md](./changelog.md).
-- When a new workspace is proposed, add it to [workspaces.md](./workspaces.md) *before* code.
-- Dates are not promised. Order is.
+Goal
+
+> Transform Nova from a browser app into a real platform.
+
+Deliverables
+
+- [ ] Authentication
+- [ ] Backend API
+- [ ] PostgreSQL
+- [ ] Cloud deployment
+- [ ] Docker
+- [ ] CI/CD
+- [ ] Sync
+- [ ] Notifications
+
+Exit Criteria
+
+Nova works across multiple devices.
+
+---
+
+# Release 0.6 — Mobile
+
+Goal
+
+> Take Nova everywhere.
+
+Deliverables
+
+- [ ] Android App
+- [ ] iOS App
+- [ ] Offline Sync
+- [ ] Widgets
+- [ ] Notifications
+
+Exit Criteria
+
+Users no longer need the web version to stay organised.
+
+---
+
+# Release 0.7 — Intelligence
+
+Goal
+
+> Make Nova an assistant, not just a tracker.
+
+Deliverables
+
+- [ ] AI Daily Planning
+- [ ] Weekly Reviews
+- [ ] Monthly Reports
+- [ ] Smart Suggestions
+- [ ] Habit Coaching
+- [ ] Budget Coaching
+- [ ] Voice Commands
+
+Principle
+
+The AI recommends.
+
+The user decides.
+
+Nova never performs important actions automatically.
+
+---
+
+# Version 1.0
+
+Goal
+
+Launch Nova publicly.
+
+Requirements
+
+- Stable
+- Responsive
+- Cross-device
+- Secure
+- Documented
+- Accessible
+- Production deployed
+
+At this point Nova should feel like a product people can trust with their daily life.
+
+---
+
+# Guiding Principles
+
+Throughout development, Nova will remain:
+
+- Local-first whenever possible
+- Privacy-first by default
+- Calm instead of addictive
+- Opinionated without being restrictive
+- Beautiful without unnecessary complexity
+- Modular but not fragmented
+
+---
+
+# Success Definition
+
+Nova succeeds when someone closes every other productivity app because they genuinely prefer living inside Nova.
+
+Not because Nova has the most features—
+
+but because it feels like home.

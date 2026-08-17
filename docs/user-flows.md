@@ -1,6 +1,6 @@
 # Nova — User Flows
 
-How a person actually moves through Nova. Screens and data contracts live in [workspaces.md](./workspaces.md) and [database.md](./database.md). This file is the interaction story.
+How a person actually moves through Nova. Screens and data contracts live in [workspaces.md](./workspaces.md), [workspace-specs/](./workspace-specs/), and [database.md](./database.md). This file is the interaction story.
 
 ---
 

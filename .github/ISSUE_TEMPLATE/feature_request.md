@@ -13,7 +13,7 @@ labels: enhancement
 
 ## Workspace
 
-<!-- Existing workspace, or a new one? New workspaces need a spec in docs/workspaces.md first. -->
+<!-- Existing workspace, or a new one? New workspaces need a paragraph in docs/workspaces.md and a file in docs/workspace-specs/ first. -->
 
 ## Out of scope
 

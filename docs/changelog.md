@@ -16,6 +16,7 @@ Convention: every user-visible change that ships gets a dated entry. Roadmap sta
 
 ### Documentation
 
+- Split workspace contracts: [workspaces.md](./workspaces.md) is the index; specs live in `workspace-specs/` (dashboard, life, career, health, learning, finance, recharge, settings).
 - Added the `docs/` set: vision, roadmap, architecture, workspaces, user-flows, database, API design, UI/UX principles, branding, monetization, and this changelog.
 
 ### Known gaps vs brand
