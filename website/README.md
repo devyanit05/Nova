@@ -1,13 +1,13 @@
 # Nova website
 
-Public marketing site — not the Life OS.
+Official marketing site for Nova — a Life Operating System.
 
+```bash
+cd website
+npm install
+npm run dev
 ```
-website/
-├── public/    Static files (favicon, og image, robots)
-└── src/       Site source (to be chosen: plain HTML or a small framework)
-```
 
-The running product lives in [`app/frontend`](../app/README.md). Brand tokens and voice live in [`docs/branding.md`](../docs/branding.md).
+Opens on [http://localhost:3001](http://localhost:3001).
 
-Do not put application logic here.
+Stack: Next.js 15, TypeScript, Tailwind CSS, Framer Motion, Lucide, shadcn-style UI.
