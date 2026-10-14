@@ -6,7 +6,7 @@ export function FinalCTA() {
   return (
     <section className="px-5 pb-28 pt-8 sm:px-8" aria-labelledby="cta-heading">
       <Reveal>
-        <div className="mx-auto max-w-4xl rounded-[36px] border border-[#E5E7EB] bg-white px-6 py-16 text-center shadow-[0_24px_60px_rgba(31,41,55,0.05)] sm:px-16">
+        <div className="mx-auto max-w-4xl rounded-[36px] border border-white/70 bg-white/60 px-6 py-16 text-center shadow-[0_24px_60px_rgba(31,41,55,0.05)] backdrop-blur-sm sm:px-16">
           <h2
             id="cta-heading"
             className="font-heading text-3xl font-semibold tracking-[-0.03em] text-[#1F2937] sm:text-4xl"

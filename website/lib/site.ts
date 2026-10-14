@@ -1,7 +1,7 @@
 export const site = {
   name: "Nova",
   tagline: "A Life Operating System",
-  url: "https://github.com/devyanit05/Nova",
+  url: "https://devyanit05.github.io/Nova",
   github: "https://github.com/devyanit05/Nova",
   docs: "https://github.com/devyanit05/Nova/tree/master/docs",
   license: "https://github.com/devyanit05/Nova/blob/master/LICENSE",

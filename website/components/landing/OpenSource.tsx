@@ -7,7 +7,7 @@ export function OpenSource() {
   return (
     <section className="px-5 py-24 sm:px-8 sm:py-32" aria-labelledby="oss-heading">
       <Reveal>
-        <div className="mx-auto max-w-6xl rounded-[36px] bg-gradient-to-br from-[#7C6CF2]/10 via-white to-[#8FD3D3]/15 px-6 py-16 sm:px-14">
+        <div className="mx-auto max-w-6xl rounded-[36px] border border-white/60 bg-white/40 px-6 py-16 shadow-[0_20px_50px_rgba(31,41,55,0.04)] backdrop-blur-sm sm:px-14">
           <p className="text-xs font-medium uppercase tracking-[0.22em] text-[#6B7280]">
             Open source
           </p>

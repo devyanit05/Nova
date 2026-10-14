@@ -30,9 +30,108 @@ body {
   background: rgba(124, 108, 242, 0.18);
 }
 
+.nebula {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(80px);
+  will-change: transform;
+}
+
+.nebula-a {
+  width: 52vw;
+  height: 52vw;
+  left: -12%;
+  top: -8%;
+  background: rgba(124, 108, 242, 0.14);
+  animation: drift-a 48s ease-in-out infinite alternate;
+}
+
+.nebula-b {
+  width: 44vw;
+  height: 44vw;
+  right: -10%;
+  top: 18%;
+  background: rgba(143, 211, 211, 0.16);
+  animation: drift-b 56s ease-in-out infinite alternate;
+}
+
+.nebula-c {
+  width: 38vw;
+  height: 38vw;
+  left: 28%;
+  bottom: -12%;
+  background: rgba(232, 180, 160, 0.12);
+  animation: drift-c 64s ease-in-out infinite alternate;
+}
+
+.dotted-grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.035;
+  background-image: radial-gradient(#1f2937 0.8px, transparent 0.8px);
+  background-size: 28px 28px;
+}
+
+.grain {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  pointer-events: none;
+  opacity: 0.045;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
+}
+
+@keyframes drift-a {
+  from { transform: translate3d(0, 0, 0) scale(1); }
+  to { transform: translate3d(6%, 8%, 0) scale(1.08); }
+}
+
+@keyframes drift-b {
+  from { transform: translate3d(0, 0, 0) scale(1); }
+  to { transform: translate3d(-7%, 5%, 0) scale(1.06); }
+}
+
+@keyframes drift-c {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(4%, -6%, 0); }
+}
+
+@keyframes float-y {
+  from { transform: translateY(0); }
+  to { transform: translateY(-10px); }
+}
+
+@keyframes breathe {
+  from { opacity: 0.45; }
+  to { opacity: 0.85; }
+}
+
+.float-slow {
+  animation: float-y 9s ease-in-out infinite alternate;
+}
+
+.float-slower {
+  animation: float-y 12s ease-in-out infinite alternate;
+}
+
+.glass-panel {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.62));
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.8) inset,
+    0 24px 60px rgba(31, 41, 55, 0.06);
+  backdrop-filter: blur(16px);
+}
+
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
+  html { scroll-behavior: auto; }
+
+  .nebula-a,
+  .nebula-b,
+  .nebula-c,
+  .float-slow,
+  .float-slower {
+    animation: none;
   }
 
   *,

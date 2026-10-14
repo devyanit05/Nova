@@ -1,25 +1,12 @@
 import Link from "next/link";
+import { DeviceStage } from "@/components/art/DeviceStage";
 import { Button } from "@/components/ui/button";
 import { site } from "@/lib/site";
-import { DashboardMockup } from "@/components/landing/DashboardMockup";
 import { Reveal } from "@/components/landing/Reveal";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden px-5 pb-20 pt-32 sm:px-8 sm:pb-28 sm:pt-40">
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -left-24 top-16 h-80 w-80 rounded-full bg-[#8FD3D3]/25 blur-3xl"
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -right-16 top-0 h-[28rem] w-[28rem] rounded-full bg-[#7C6CF2]/16 blur-3xl"
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute bottom-10 left-1/3 h-56 w-56 rounded-full bg-[#E8B4A0]/20 blur-3xl"
-      />
-
+    <section className="relative px-5 pb-16 pt-32 sm:px-8 sm:pb-28 sm:pt-40">
       <div className="relative mx-auto max-w-6xl">
         <Reveal>
           <p className="mb-5 text-center text-xs font-medium uppercase tracking-[0.22em] text-[#6B7280]">
@@ -43,8 +30,8 @@ export function Hero() {
           </div>
         </Reveal>
 
-        <Reveal delay={0.12} className="mt-16 sm:mt-20">
-          <DashboardMockup />
+        <Reveal delay={0.15} className="mt-14 sm:mt-16">
+          <DeviceStage />
         </Reveal>
       </div>
     </section>

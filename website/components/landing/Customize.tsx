@@ -3,6 +3,7 @@
 import { Reorder } from "framer-motion";
 import { GripVertical } from "lucide-react";
 import { useState } from "react";
+import { WorkspaceArt } from "@/components/art/WorkspaceArt";
 import { Reveal } from "@/components/landing/Reveal";
 
 const starter = ["Daily Planning", "Finance", "Health", "Journal", "Career"];
@@ -32,6 +33,9 @@ export function Customize() {
             Drag the cards on the right. Nothing is locked. Templates are a beginning, not a
             prison.
           </p>
+          <div className="mt-8 overflow-hidden rounded-[28px] border border-white/70 bg-white/40">
+            <WorkspaceArt name="Vision Board" />
+          </div>
         </Reveal>
 
         <Reveal delay={0.08}>
@@ -46,7 +50,7 @@ export function Customize() {
               <Reorder.Item
                 key={item}
                 value={item}
-                className="flex cursor-grab items-center gap-3 rounded-2xl border border-[#E5E7EB] bg-white px-4 py-4 shadow-[0_8px_24px_rgba(31,41,55,0.04)] active:cursor-grabbing"
+                className="flex cursor-grab items-center gap-3 rounded-2xl border border-white/70 bg-white/70 px-4 py-4 shadow-[0_8px_24px_rgba(31,41,55,0.04)] backdrop-blur-sm transition-transform duration-300 hover:-translate-y-0.5 active:cursor-grabbing"
               >
                 <GripVertical className="h-4 w-4 text-[#C4C9D2]" />
                 <span className="font-heading text-sm font-medium text-[#1F2937]">{item}</span>

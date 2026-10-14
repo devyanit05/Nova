@@ -1,3 +1,4 @@
+import { WorkspaceArt } from "@/components/art/WorkspaceArt";
 import { roadmap } from "@/lib/content";
 import { Reveal } from "@/components/landing/Reveal";
 
@@ -19,6 +20,10 @@ export function Vision() {
             The AI never controls your day. It only recommends. You stay in charge — of the
             plan, the spend, and the page you write at night.
           </p>
+        </Reveal>
+
+        <Reveal delay={0.08} className="mt-10 max-w-xl overflow-hidden rounded-[28px] border border-white/70 bg-white/40">
+          <WorkspaceArt name="Goals" />
         </Reveal>
 
         <ol className="relative mt-16 space-y-0 border-l border-[#E5E7EB] pl-8 sm:ml-4">

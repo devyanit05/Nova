@@ -1,3 +1,4 @@
+import { WorkspaceArt } from "@/components/art/WorkspaceArt";
 import { Reveal } from "@/components/landing/Reveal";
 
 const principles = [
@@ -12,7 +13,7 @@ const principles = [
 export function Calm() {
   return (
     <section className="px-5 py-24 sm:px-8 sm:py-32" aria-labelledby="calm-heading">
-      <div className="mx-auto max-w-6xl rounded-[36px] border border-[#E5E7EB] bg-white px-6 py-14 sm:px-14">
+      <div className="mx-auto max-w-6xl rounded-[36px] border border-white/70 bg-white/55 px-6 py-14 shadow-[0_20px_50px_rgba(31,41,55,0.04)] backdrop-blur-sm sm:px-14">
         <Reveal>
           <p className="text-xs font-medium uppercase tracking-[0.22em] text-[#6B7280]">
             Built around calm
@@ -28,6 +29,10 @@ export function Calm() {
             see your life clearly — then close the lid.
           </p>
         </Reveal>
+
+        <div className="mt-10 overflow-hidden rounded-[28px] border border-white/60 bg-[#F8F7F5]/40">
+          <WorkspaceArt name="Self Care" />
+        </div>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {principles.map((item, i) => (
