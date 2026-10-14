@@ -1,14 +1,35 @@
+import type { Metadata } from "next";
+import { ProsePage } from "@/components/site/ProsePage";
+
+export const metadata: Metadata = {
+  title: "About",
+  description: "Nova is a Life Operating System — one calm desk for planning, money, health, learning, and rest.",
+};
+
 export default function AboutPage() {
   return (
-    <main id="content" className="mx-auto max-w-2xl px-5 pb-24 pt-32 sm:px-8">
-      <h1 className="font-heading text-3xl font-semibold tracking-[-0.03em] text-[#1F2937]">
-        About
-      </h1>
-      <p className="mt-6 text-base leading-relaxed text-[#6B7280]">
-        Nova is a Life Operating System — a calm digital home for planning, money, health,
-        learning, career, and rest. It exists so you can stop managing apps and start
-        seeing your life.
+    <ProsePage
+      eyebrow="About"
+      title="One desk for a whole life."
+      lede="Nova exists so you can stop managing apps and start seeing the day you actually have."
+    >
+      <p>
+        Tasks live in one place. Money in another. Water, reading, interviews, and the
+        journal are scattered across tools that do not know each other. Nova is the quiet
+        alternative: a Life Operating System, not a productivity scoreboard.
       </p>
-    </main>
+      <h2>Who it is for</h2>
+      <p>
+        People who already try to live intentionally and are tired of switching. A private
+        desk — not a team workspace, not a social network, not a streak that scolds you
+        for a human day.
+      </p>
+      <h2>How it is being built</h2>
+      <p>
+        The public site comes first, so the feeling is agreed before the features multiply.
+        The daily loop — schedule, a short task list, water, journal — comes next, on your
+        own device. Sync and a coach come only after that desk is something you would miss.
+      </p>
+    </ProsePage>
   );
 }

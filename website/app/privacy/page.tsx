@@ -1,18 +1,28 @@
+import type { Metadata } from "next";
+import { ProsePage } from "@/components/site/ProsePage";
+
+export const metadata: Metadata = {
+  title: "Privacy",
+  description: "Journal and finances are not content. Nova does not sell life data.",
+};
+
 export default function PrivacyPage() {
   return (
-    <main id="content" className="mx-auto max-w-2xl px-5 pb-24 pt-32 sm:px-8">
-      <h1 className="font-heading text-3xl font-semibold tracking-[-0.03em] text-[#1F2937]">
-        Privacy
-      </h1>
-      <p className="mt-6 text-base leading-relaxed text-[#6B7280]">
-        Journal entries and finances are not content. Nova will not run ads against your
-        life data, will not sell it, and will not send private text to a model unless you
-        explicitly ask a coach to look. You can export everything. You can leave.
+    <ProsePage
+      eyebrow="Privacy"
+      title="Your life is not content."
+      lede="This is the promise. A longer policy will ship with the first hosted app. Until then, the rules below are the product."
+    >
+      <ul>
+        <li>No ads against journal entries, spending, or health.</li>
+        <li>No selling life data. Not to advertisers, not to data brokers, not as a “partnership.”</li>
+        <li>A coach, when it exists, sees private text only when you explicitly ask it to look.</li>
+        <li>You can export everything. You can leave.</li>
+      </ul>
+      <p>
+        The site you are reading is static. It does not ask you to sign in, and it does not
+        store a day. The first app keeps that day on your device.
       </p>
-      <p className="mt-4 text-base leading-relaxed text-[#6B7280]">
-        A full policy will ship with the first hosted version. Until then, the prototype
-        keeps data on your device.
-      </p>
-    </main>
+    </ProsePage>
   );
 }

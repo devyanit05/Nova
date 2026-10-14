@@ -10,9 +10,22 @@ export const site = {
 } as const;
 
 export const nav = [
-  { href: "#features", label: "Features" },
-  { href: "#workspaces", label: "Workspaces" },
-  { href: "#vision", label: "Vision" },
-  { href: "#roadmap", label: "Roadmap" },
-  { href: "#faq", label: "FAQ" },
+  { href: "/#features", label: "Features" },
+  { href: "/#workspaces", label: "Workspaces" },
+  { href: "/#vision", label: "Vision" },
+  { href: "/#roadmap", label: "Roadmap" },
+  { href: "/#faq", label: "FAQ" },
 ] as const;
+
+export const pages = [
+  { href: "/about", label: "About" },
+  { href: "/pricing", label: "Pricing" },
+  { href: "/changelog", label: "Changelog" },
+  { href: "/blog", label: "Blog" },
+  { href: "/#contact", label: "Contact" },
+] as const;
+
+export const contact = {
+  href: "https://github.com/devyanit05/Nova/issues/new",
+  label: "Open an issue",
+} as const;

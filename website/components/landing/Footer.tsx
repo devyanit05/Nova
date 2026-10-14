@@ -1,11 +1,11 @@
 import Link from "next/link";
 import { Logo } from "@/components/brand/Logo";
-import { nav, site } from "@/lib/site";
+import { nav, pages, site } from "@/lib/site";
 
 export function Footer() {
   return (
     <footer className="border-t border-[#E5E7EB] bg-white">
-      <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:px-8 md:grid-cols-[1.4fr_1fr_1fr]">
+        <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:px-8 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
         <div>
           <Logo />
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-[#6B7280]">
@@ -20,6 +20,18 @@ export function Footer() {
                 <a href={item.href} className="text-[#1F2937] hover:text-[#7C6CF2]">
                   {item.label}
                 </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <p className="text-xs font-medium uppercase tracking-[0.16em] text-[#6B7280]">Site</p>
+          <ul className="mt-4 space-y-2 text-sm">
+            {pages.map((item) => (
+              <li key={item.href}>
+                <Link href={item.href} className="text-[#1F2937] hover:text-[#7C6CF2]">
+                  {item.label}
+                </Link>
               </li>
             ))}
           </ul>

@@ -154,6 +154,25 @@ export const faqs = [
   },
 ] as const;
 
+export const releases = [
+  {
+    date: "October 2026",
+    title: "A public face",
+    items: [
+      "The marketing site is live: the philosophy, the workspaces, and a roadmap anyone can read.",
+      "Published from GitHub Actions to GitHub Pages.",
+    ],
+  },
+  {
+    date: "August 2026",
+    title: "Nova, named",
+    items: [
+      "A local daily desk already existed: schedule, tasks, water, journal, money, and career practice.",
+      "The product was named Nova — a Life Operating System, not another task app.",
+    ],
+  },
+] as const;
+
 export const scattered = [
   "Tasks",
   "Calendar",

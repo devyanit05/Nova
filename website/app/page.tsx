@@ -1,4 +1,5 @@
 import { Calm } from "@/components/landing/Calm";
+import { Contact } from "@/components/landing/Contact";
 import { Customize } from "@/components/landing/Customize";
 import { FAQ } from "@/components/landing/FAQ";
 import { Features } from "@/components/landing/Features";
@@ -21,6 +22,7 @@ export default function HomePage() {
       <Vision />
       <OpenSource />
       <FAQ />
+      <Contact />
       <FinalCTA />
     </main>
   );
